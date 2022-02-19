@@ -27,37 +27,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Base
  * ,---------------------------.
- * |   7  |   8  |   9  |BSPACE|
+ * |   7  |   8  |   9  |BACKSP|
  * |------+------+------+------|
- * |   4  |   5  |   6  | ESC  |
+ * |   4  |   5  |   6  |   +  |
  * |------+------+------+------|
- * |   1  |   2  |   3  | TAB  |
+ * |   1  |   2  |   3  |   -  |
  * |------+------+------+------|
  * |  FN1 |   0  |   .  |ENTER |
  * `---------------------------'
  */
 [_BASE] = LAYOUT_ortho_4x4(
     KC_P7,    KC_P8,    KC_P9,    KC_BSPC,
-    KC_P4,    KC_P5,    KC_P6,    KC_ESC,
-    KC_P1,    KC_P2,    KC_P3,    KC_TAB,
+    KC_P4,    KC_P5,    KC_P6,    KC_PMNS,
+    KC_P1,    KC_P2,    KC_P3,    KC_PPLS,
     TT(_FN1), KC_P0,    KC_PDOT,  KC_PENT
 ),
 
 /* FN1
  * ,---------------------------.
- * | RESET|      |      |      |
+ * |      |      |      | RESET|
  * |------+------+------+------|
- * |      |      |      |   +  |
+ * |      |      |      |   *  |
  * |------+------+------+------|
- * |      |      |      |   -  |
+ * |      |      |      |   /  |
  * |------+------+------+------|
  * |      |      |      |   =  |
  * `---------------------------'
  */
 [_FN1] = LAYOUT_ortho_4x4(
-    RESET,     KC_TRNS,   KC_TRNS,    KC_TRNS,
-    KC_TRNS,   KC_TRNS,   KC_TRNS,    KC_PMNS,
-    KC_TRNS,   KC_TRNS,   KC_TRNS,    KC_PPLS,
+    KC_TRNS,   KC_TRNS,   KC_TRNS,    RESET,
+    KC_TRNS,   KC_TRNS,   KC_TRNS,    KC_PAST,
+    KC_TRNS,   KC_TRNS,   KC_TRNS,    KC_PSLS,
     KC_TRNS,   KC_TRNS,   KC_TRNS,    KC_PEQL
 ),
 
